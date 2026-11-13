@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.env
+data/*.sqlite*
+data/documents/
+*.log
+*.tsbuildinfo
+FINN_Codex_Master_Prompt.md
+ENAM_AI_Engineer_Build_Challenge_Main.pdf
+ENAM_Build_Challenge_Reference.pdf

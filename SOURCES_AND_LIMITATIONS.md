@@ -1,0 +1,20 @@
+# Sources and limitations
+
+Checked 14 November 2026 (Asia/Kolkata). The local smoke results below reflect this workspace and the refresh timestamp recorded in `data/finn.sqlite`; provider behavior can change.
+
+| Source | Role / primary status | Access and observed result | Refresh / limitation / fallback |
+|---|---|---|---|
+| [NSE RSS index](https://www.nseindia.com/static/rss-feed) and [official announcements feed](https://nsearchives.nseindia.com/content/RSS/Online_announcements.xml) | Primary exchange announcements | Public XML GET returned HTTP 200 and `application/xml`; 22 RSS entries were scanned during the local smoke. The feed is broad; only exact company-name matches in the configured portfolio are stored. | On-demand. In the verified feed window, no valid portfolio-name matches remained after fixing the `LT` substring bug. UI falls back to marked illustrative fixtures and reports this count; it does not invent live filings. |
+| [NSE corporate filings](https://www.nseindia.com/companies-listing/corporate-filings-announcements) | Canonical user-facing filing destination | Link only; no undocumented endpoint or CAPTCHA bypass used. | RSS entry links are preserved. Some source items may not contain a separate attachment field because the RSS `link` is itself the PDF. |
+| [Yahoo Finance historical prices](https://finance.yahoo.com/quote/RELIANCE.NS/history/) and Yahoo chart endpoint `query1.finance.yahoo.com/v8/finance/chart/{symbol}` | Secondary convenience source for PUSH EOD only | Direct chart GET returned HTTP 200 JSON for `RELIANCE.NS`. A local run returned usable daily observations for 18/18 configured portfolio tickers. Latest available dates may trail the fetch date (the smoke was on a weekend). | On-demand, sequential requests; 3-month chart history is currently requested on each refresh and upserted in SQLite. Yahoo may throttle/change the endpoint. Never treated as an official or streaming exchange feed. |
+| [Infosys Integrated Annual Report 2025–26](https://www.infosys.com/investors/reports-filings/annual-report/annual/documents/infosys-ar-26.pdf) | Primary company source | Direct PDF GET returned HTTP 200. Stored locally (ignored by Git), SHA-256 recorded, 383 pages extracted. | On-demand first research query; checksum avoids re-indexing identical content. Public company PDF is copyrighted; the app links to the original and does not redistribute it from a hosted service. |
+| [Infosys Q2 FY27 earnings-call transcript](https://www.infosys.com/investors/reports-filings/quarterly-results/2026-2027/q2/documents/transcripts/earningscall.pdf) | Primary company transcript | Direct PDF GET returned HTTP 200. Stored locally (ignored by Git), SHA-256 recorded, 25 pages extracted. | Same local-only ingestion and link-first handling as the annual report. Extractive excerpts are short and page-cited. |
+| LLM provider | Optional / not configured | No LLM provider is used or required. | Research is local keyword retrieval. No model output or pre-existing company knowledge is presented as source-grounded analysis. |
+
+## Limitations
+
+- RSS names can vary from the display name in the portfolio; unmatched rows are skipped rather than assigned by ticker substring. RSS coverage is a short recent window, not a historical archive.
+- Yahoo is an unofficial public interface. Current code stores history but still requests a recent 3-month range on refresh; incremental range fetching is a follow-up improvement.
+- The local source smoke does not imply continuous monitoring. Refresh is user initiated, and EOD triggers are evaluated only when a newer market session appears.
+- Research is grounded to two Infosys documents. Other NSE tickers currently return a clear no-verified-documents state. The retrieval result is evidence, not a completed financial-analysis narrative.
+- No result filing parser exists yet for Revenue, EBITDA, PBT, PAT; no QoQ/YoY output is claimed. No management background enrichment or category-based announcement alert is claimed.
