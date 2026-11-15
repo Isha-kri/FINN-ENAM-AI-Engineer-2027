@@ -41,3 +41,4 @@
 - Remaining scope is documented: arbitrary NSE document discovery and editable universe, non-Infosys result/narrative parsing, and browser screenshot/e2e QA are not complete. The app and core backend workflows are implemented, but those requirements prevent calling the challenge fully complete.
 
 - Added a Pulse company detail overlay reachable from filing tickers, showing stored EOD freshness, recent filings, research document availability, and a Deep Research handoff. Final typecheck, all 11 tests, and production build passed after this addition.
+- Created the public submission repository at https://github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027 and pushed the project. Added the live repository link to README and the covering email draft. No deployed demo URL is available yet.

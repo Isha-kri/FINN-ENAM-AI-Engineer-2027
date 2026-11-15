@@ -11,7 +11,7 @@ I kept the product deliberately small and honest about its boundaries: the Pulse
 
 I implemented category-based filing alerts alongside close-move and volume rules. The Infosys Q2 FY27 statement now demonstrates page-cited Revenue, PBT, and PAT extraction with QoQ/YoY comparisons. EBITDA remains unextracted; general parsing for other issuers, broader multi-company document discovery, and four-quarter narrative-vs-numbers analysis remain next steps. Those need careful page evidence and basis/unit validation before they should be shown as conclusions. The next step would be a stronger filing provider plus visual QA on real mobile devices.
 
-Run the local prototype with `npm install` and `npm run dev`; open http://localhost:5173. The source repository is the project folder supplied with this submission. No deployment URL or public repository was created, and this email is a draft only.
+Run the local prototype with `npm install` and `npm run dev`; open http://localhost:5173. The source repository is https://github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027. The prototype is not deployed yet; run it locally with `npm install` and `npm run dev` at http://localhost:5173. The AI build history index is in the repository; the full conversation export/share link should be added before sending. This email is a draft only.
 
 Regards,  
 FINN build challenge submission

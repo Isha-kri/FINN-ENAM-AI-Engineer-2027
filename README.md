@@ -2,6 +2,8 @@
 
 FINN is a mobile-first investor signal desk with two clear modes: **Pulse** for portfolio changes and EOD alerts, and **Deep Research** for page-cited excerpts from primary company documents. The prototype is deliberately honest about coverage: the initial Pulse cards are illustrative fixtures, while refreshable filings/prices and the Infosys document library are real sources.
 
+**Submission repository:** [github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027](https://github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027). No hosted demo is available yet; run locally using the steps below.
+
 ## Run locally
 
 Requirements: Node.js 20.19+ or 22.12+ (tested with Node 24) and npm. The API and UI run locally; no account, API key, or external service is needed to start.
