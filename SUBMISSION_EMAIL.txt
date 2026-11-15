@@ -1,0 +1,21 @@
+To: assessment@enam.com
+Subject: IIT Delhi – AI Engineer - 2027
+
+Hello ENAM team,
+
+I built FINN, a mobile-first investor workspace with Pulse, Portfolio, Deep Research, Watchtower, and a private Research Journal. The prototype supports filing triage, configurable filing and end-of-day alert rules, portfolio browsing, and page-cited research over configured primary company documents.
+
+The main product choices were to make the daily workflow scannable, keep personal notes separate from company evidence, and show source and freshness boundaries clearly. The research demo uses local lexical retrieval rather than an external LLM. I deliberately left general financial-statement extraction, broad document discovery across every ticker, and a stable hosted deployment out of scope. Yahoo prices are delayed end-of-day data; the prototype labels them accordingly. Some Pulse cards are illustrative examples when the live filing feed has no matching portfolio filings.
+
+You can review the code and download the runnable prototype here:
+Repository: https://github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027
+Prototype ZIP: https://raw.githubusercontent.com/Isha-kri/FINN-ENAM-AI-Engineer-2027/master/FINN-local-prototype.zip
+
+The app is a responsive local web prototype rather than a permanently hosted service. To try it on a phone, run the app on a laptop using the included start-finn.bat (Windows) or start-finn.sh (macOS/Linux), connect the phone to the same Wi-Fi network, and open the laptop's local network address on port 8000. LOCAL_RUN.md has the steps. A supported Node.js version and internet access are needed for first-time setup.
+
+The repository includes AI_BUILD_HISTORY.md, which records the implementation history and verified work. This shared chat is a post-build retrospective based on project artifacts, not a contemporaneous transcript of the build conversation: https://chatgpt.com/s/cx_6af9ed20ff788191ac0f03b7c7db3ef0
+
+With another week, I would test the mobile experience on real devices, improve coverage and resilience of the filing source, and generalize the financial extraction workflow to more issuers while retaining page-level evidence.
+
+Regards,
+Isha

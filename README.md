@@ -73,3 +73,12 @@ See [BUILD_LOG.md](BUILD_LOG.md), [SOURCES_AND_LIMITATIONS.md](SOURCES_AND_LIMIT
 
 [AI_BUILD_CONVERSATION.md](AI_BUILD_CONVERSATION.md) is a disclosed reconstruction from the available project conversation, not a verbatim chat export. See [AI_BUILD_HISTORY.md](AI_BUILD_HISTORY.md) for the build record. Use the chat platform's export/share feature for an original conversation export.
 
+
+## Submission handoff
+
+- [Submission email draft](SUBMISSION_EMAIL.txt)
+- [Deliverable checklist and known gaps](SUBMISSION_CHECKLIST.md)
+- [AI conversation retrospective](AI_BUILD_CONVERSATION.md)
+
+The shared chat URL provided for submission is a post-build retrospective, not the original build-time transcript. No stable public preview is active; see [LOCAL_RUN.md](LOCAL_RUN.md) for local and same-Wi-Fi phone instructions.
+

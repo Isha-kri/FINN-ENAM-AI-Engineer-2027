@@ -1,71 +1,59 @@
-# FINN project conversation reconstruction
+# FINN project collaboration: reconstructed discussion guide
 
-> **Disclosure:** This is an edited reconstruction based on the project brief, the available Codex conversation, and the work recorded in this repository. It is not a verbatim transcript or an exported chat. Only the lines marked **Actual user prompt** reproduce wording available in the conversation; all other dialogue is paraphrased or reconstructed for readability. Use the platform's real export/share feature if the reviewer requests an original conversation.
+> **Status and use:** This document is a retrospective reconstruction of the FINN project collaboration, assembled from the project brief and repository artifacts. It is not a transcript, chat export, or reliable record of exact wording, message order, or timing. The sections below summarize themes and decisions; they do not recreate speaker-by-speaker dialogue. Use them to discuss the project in a new conversation. If an original chat history is required, obtain it through the platform's export or share feature.
 
-## Project kickoff and scope
+## Project in brief
 
-**User — Actual user prompt:** “Complete the whole project of ENAM, the details are included inside the folder itself, of what to do, proceed further and complete the project.”
+FINN is a prototype built for the ENAM project challenge. The work developed from the challenge brief into a runnable, mobile-friendly web application with supporting setup, demo, architecture, source, and limitation documents. The repository's implementation and handoff status are recorded in [AI_BUILD_HISTORY.md](AI_BUILD_HISTORY.md), while [LOCAL_RUN.md](LOCAL_RUN.md) explains how to launch it.
 
-**Codex — Reconstructed summary:** I’ll start from the challenge brief and the existing project files, then implement the prototype and prepare the handoff materials. I’ll keep source-backed results separate from demo examples and document any limitations.
+## Reconstructed project decisions
 
-**User — Reconstructed summary:** Please make sure the result is something a reviewer can actually try, not just a set of screenshots or a concept document.
+These points summarize the choices reflected in the project artifacts. They are not presented as quotations or as a complete record of how each choice was made.
 
-**Codex — Reconstructed summary:** I’m treating a runnable, mobile-friendly web app as the deliverable. I’ll include setup instructions and a short demo path so a reviewer can run it locally.
+### Make the deliverable usable
 
-**User — Reconstructed summary:** Keep the research grounded in company documents and make it clear when a result is only a sample.
+The project was shaped as a working local prototype rather than a static concept. Setup scripts and a demo path were included so a reviewer could try the application on their own machine. This made the handoff more concrete, while leaving the reviewer dependent on a supported Node.js version and an initial dependency install.
 
-**Codex — Reconstructed summary:** The prototype uses page-indexed primary documents for its worked research example, labels illustrative Pulse cards, and avoids presenting unsupported values as facts. Its current research path uses local lexical retrieval rather than an external LLM.
+### Keep research claims grounded
 
-## Progress checks and submission needs
+The research experience uses page-indexed primary materials for its worked example and local lexical retrieval. Illustrative Pulse content is labeled as such, and limitations are documented. This favors traceability and honest scope over implying that a live external research or language-model service is powering the prototype.
 
-**User — Actual user prompt:** “what parts of the deliverables are complete”
+### Expand the product around distinct tasks
 
-**Codex — Reconstructed summary:** The requested package has four parts: a prototype, a GitHub repository, an AI build-history record, and a short covering note. I’ll report each separately and identify whether it is implemented, published, or still needs an account-owner action.
+The navigation grew to include Pulse, Portfolio, Research, Watchtower, and Journal. Portfolio search and sector filters support browsing; company views connect to research; and the journal supports personal notes and status tracking. The intent reflected in the implementation is to give each area a practical role instead of adding tabs without a clear use.
 
-**User — Actual user prompt:** “https://github.com/Isha-kri this is my github account, upload all of the important files and whatever deliverables it want”
+### Separate personal notes from evidence
 
-**Codex — Reconstructed summary:** I’ll publish the project and its handoff documents in a repository under that account, then include the repository link in the README and covering-note draft.
+Journal entries are treated as user working notes and kept distinct from source-backed research. That boundary helps prevent an analyst's opinion from being mistaken for a verified company fact.
 
-**Codex — Reconstructed progress note:** The repository now contains the application, local launch instructions, architecture and limitations notes, demo steps, and build history. A reviewer can use the local package without relying on a hosted service.
+### Design for a credible handoff
 
-**User — Actual user prompt:** “prototype link bana do”
+The repository includes run instructions, a demo script, architecture and limitations notes, and a build history. A temporary preview can help with quick review, but its availability depends on the process hosting it; the repository and local package provide more durable access paths.
 
-**Codex — Reconstructed summary:** I prepared deployment instructions and a temporary preview path. A temporary tunnel can be useful for a quick review, but it depends on the originating process staying online; the local ZIP and public repository are more stable handoff options.
+## Lessons to carry forward
 
-**User — Reconstructed summary:** Could someone access the app from their own computer if I include the needed files with the prototype?
+- **A usable prototype needs a clear first-run path.** A reviewer should know what to install, how to launch the app, and what to try first.
+- **Show provenance and freshness where claims appear.** Labels and source links help users judge what is evidence, what is illustrative, and how current a result may be.
+- **Keep confidence aligned with the implementation.** Local lexical retrieval can support a useful demo, but should not be described as an AI research agent or live data service.
+- **Add features to support workflows.** Portfolio-to-research links and a personal journal make the expanded navigation more coherent when each destination supports a specific task.
+- **Treat handoff as part of the product.** Setup instructions, known limitations, and an honest build record make the prototype easier to review and maintain.
+- **Keep retrospective records distinct from source history.** A reconstruction can explain decisions and lessons, but it cannot substitute for an exported conversation.
 
-**Codex — Reconstructed summary:** Yes. The project includes Windows and macOS/Linux launch scripts. They install dependencies, build the app, and start the local server. The recipient needs a supported Node.js version and internet for the initial dependency installation.
+## Topics for a new conversation
 
-## Product feedback and iteration
+Use these questions to continue the discussion without relying on reconstructed dialogue:
 
-**User — Actual user prompt:** “the protoype does not look very fascinating, and it very bad, can you make it more diverse, effective engaging and have more featuees and tab”
+1. Which FINN workflow should a reviewer try first, and what should they learn from it?
+2. Which research claims have primary-source support, and which content is only illustrative?
+3. What would be needed to move from local lexical retrieval to a dependable live research workflow?
+4. Do the five navigation areas support distinct user tasks, or should any be combined or reprioritized?
+5. What evidence would show that the Journal's separation from verified research is clear to users?
+6. Which deployment path best fits the next review: local launch, a stable hosted preview, or both?
 
-**Codex — Reconstructed summary:** I’ll broaden the navigation and give each destination a clearer job. I’ll add a portfolio overview and a private research journal while making the briefing and cards easier to scan on a phone.
+## Related project records
 
-**Codex — Reconstructed progress note:** The main navigation now has Pulse, Portfolio, Research, Watchtower, and Journal. Portfolio supports company search and sector filtering; the journal supports creating, editing, searching, and status-tracking personal notes.
-
-**User — Reconstructed summary:** Make sure a saved personal opinion cannot be confused with a verified company fact.
-
-**Codex — Reconstructed summary:** The journal labels entries as user working notes and keeps their storage and display separate from source-backed research evidence.
-
-**User — Reconstructed summary:** Let the portfolio connect to research, so the company view leads somewhere useful.
-
-**Codex — Reconstructed summary:** Company cards open a company brief with stored EOD freshness and configured research links, with a handoff into Deep Research.
-
-**Codex — Reconstructed progress note:** The Pulse view includes a dynamic daily brief. The refreshed layout uses a stronger hierarchy, clearer source/freshness labels, and responsive layouts for the additional destinations.
-
-## Verification and handoff
-
-**User — Reconstructed summary:** Before calling it finished, confirm that the project still builds and the main data paths work.
-
-**Codex — Reconstructed summary:** Type checking, the production build, and the 11 existing domain tests pass. I also exercised the journal create/read/update/delete API and checked the portfolio response for its configured 18 companies.
-
-**Codex — Reconstructed progress note:** I regenerated `FINN-local-prototype.zip` from the updated tracked files and pushed the UI, journal API, documentation, and package to the GitHub repository.
-
-**User — Reconstructed summary:** What about the chat history deliverable?
-
-**Codex — Reconstructed summary:** This file is a disclosed reconstruction, not an original export. The actual conversation should be exported or shared through the chat platform if an original history is required. I won’t present invented prompts or replies as a verbatim record.
-
-## Where this reconstruction came from
-
-The exact prompt excerpts above are present in the available conversation context. The other turns condense the surrounding requests and implementation updates; they are not claims about exact wording or exact message timing. The implementation record is in [AI_BUILD_HISTORY.md](AI_BUILD_HISTORY.md), and the current setup instructions are in [LOCAL_RUN.md](LOCAL_RUN.md).
+- [AI_BUILD_HISTORY.md](AI_BUILD_HISTORY.md) — implementation and handoff history.
+- [ARCHITECTURE.md](ARCHITECTURE.md) — application structure and technical choices.
+- [SOURCES_AND_LIMITATIONS.md](SOURCES_AND_LIMITATIONS.md) — source grounding and known limitations.
+- [DEMO_SCRIPT.md](DEMO_SCRIPT.md) — suggested reviewer walkthrough.
+- [LOCAL_RUN.md](LOCAL_RUN.md) — local setup and launch steps.

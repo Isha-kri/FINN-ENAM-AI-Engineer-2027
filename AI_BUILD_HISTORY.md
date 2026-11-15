@@ -28,3 +28,5 @@ No external LLM was used to generate company analysis. The project uses local de
 - **Follow-up user feedback, 15 November 2026:** “the protoype does not look very fascinating, and it very bad, can you make it more diverse, effective engaging and have more featuees and tab”. In response, refreshed the information hierarchy and palette, added the daily briefing card, Portfolio tab, five-item navigation, and persistent Research Journal. Ran typecheck, domain tests, production build, and local journal/portfolio API smoke checks.
 
 An expanded, clearly disclosed conversation reconstruction is provided in [AI_BUILD_CONVERSATION.md](AI_BUILD_CONVERSATION.md). It distinguishes exact user prompt excerpts from paraphrased/reconstructed turns and is not an original export.
+
+- **User-supplied shared chat link:** https://chatgpt.com/s/cx_6af9ed20ff788191ac0f03b7c7db3ef0. The user describes this as a separate conversation based on the reconstruction file. It is treated in the submission as a post-build retrospective, not as a contemporaneous transcript. The link opened without readable contents in the review environment, so its content was not independently verified.

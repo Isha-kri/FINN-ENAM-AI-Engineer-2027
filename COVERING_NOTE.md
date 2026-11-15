@@ -1,17 +1,5 @@
-# Covering email draft
+﻿# Covering email draft
 
-**To:** assessment@enam.com  
-**Subject:** IIT Delhi â€“ AI Engineer - 2027
+Use [SUBMISSION_EMAIL.txt](SUBMISSION_EMAIL.txt) as the current copy-ready email body. It matches the current repository and correctly describes the prototype as a responsive local web app with no stable hosted preview.
 
-Hello ENAM team,
-
-I built FINN as a mobile-first investor workspace with Pulse, Portfolio, Deep Research, Watchtower, and a private Research Journal. The prototype reads official NSE announcements RSS and Yahoo daily history and indexes verified Infosys annual and quarterly primary documents page by page. Research results show short retrieved excerpts with links to the cited PDF pages; journal notes are kept separate from source-backed company evidence.
-
-I kept the product deliberately small and honest about its boundaries: the Pulse fallback examples are marked illustrative; Yahoo data is labeled EOD/delayed; and FINN does not invent a result, filing, or research conclusion when it cannot cite a primary source. The local zero-key research mode uses lexical retrieval rather than a stock-price model or an LLM. SQLite holds filings, price history, alert rules, trigger events, document metadata, and page chunks on the machine running the app.
-
-I implemented category-based filing alerts alongside close-move and volume rules. The Infosys Q2 FY27 statement now demonstrates page-cited Revenue, PBT, and PAT extraction with QoQ/YoY comparisons. EBITDA remains unextracted; general parsing for other issuers, broader multi-company document discovery, and four-quarter narrative-vs-numbers analysis remain next steps. Those need careful page evidence and basis/unit validation before they should be shown as conclusions. The next step would be a stronger filing provider plus visual QA on real mobile devices.
-
-Run the local prototype with `npm install` and `npm run dev`; open http://localhost:5173. The source repository is https://github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027. A Render one-click deployment is prepared in the README, but the app is not live until the account owner signs in and approves the Blueprint. The AI build history index is in the repository; add the actual conversation export/share link before sending. This email is a draft only.
-
-Regards,  
-FINN build challenge submission
+The Codex link provided for the submission is a post-build retrospective chat, not the original build-time conversation. The repository's `AI_BUILD_HISTORY.md` records the actual implementation history available in this workspace. If the reviewer requires a true conversation export, share the original project build chat separately.
