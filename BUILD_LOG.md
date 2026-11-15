@@ -42,3 +42,5 @@
 
 - Added a Pulse company detail overlay reachable from filing tickers, showing stored EOD freshness, recent filings, research document availability, and a Deep Research handoff. Final typecheck, all 11 tests, and production build passed after this addition.
 - Created the public submission repository at https://github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027 and pushed the project. Added the live repository link to README and the covering email draft. No deployed demo URL is available yet.
+- Prepared Render deployment with a free-tier Blueprint, health check, and configurable local database directory. The README includes a one-click deploy link. Live deployment still requires the account owner to sign in and approve the Blueprint; free service storage is ephemeral, so this is for demo review only.
+- Added a clearly labeled, submission-friendly reconstruction of actual user directions and project actions to AI_BUILD_HISTORY.md. It does not claim to be the full transcript; the account owner must attach or link the real Codex export.

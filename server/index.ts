@@ -9,7 +9,7 @@ import { classify as classifyAnnouncement, filingRuleMatches, moveThresholdExcee
 
 const app = express();
 app.use(express.json());
-const dataDir = join(process.cwd(), 'data'); mkdirSync(dataDir, { recursive: true });
+const dataDir = process.env.FINN_DATA_DIR || join(process.cwd(), 'data'); mkdirSync(dataDir, { recursive: true });
 const db = new Database(join(dataDir, 'finn.sqlite'));
 db.pragma('journal_mode = WAL');
 db.exec(`CREATE TABLE IF NOT EXISTS alert_rules (id TEXT PRIMARY KEY, ticker TEXT NOT NULL, kind TEXT NOT NULL, threshold REAL NOT NULL, category TEXT NOT NULL DEFAULT '', enabled INTEGER NOT NULL DEFAULT 1, updated_at TEXT NOT NULL);

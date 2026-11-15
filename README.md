@@ -4,6 +4,10 @@ FINN is a mobile-first investor signal desk with two clear modes: **Pulse** for 
 
 **Submission repository:** [github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027](https://github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027). No hosted demo is available yet; run locally using the steps below.
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027)
+
+The Render Blueprint uses the free web-service tier for a review demo. It sleeps after inactivity, and its SQLite database and indexed PDFs are ephemeral and may reset on restart or redeploy. This deployment is for evaluation, not durable storage. Render requires you to sign in, connect the GitHub repository, review the Blueprint, and approve deployment.
+
 ## Run locally
 
 Requirements: Node.js 20.19+ or 22.12+ (tested with Node 24) and npm. The API and UI run locally; no account, API key, or external service is needed to start.
