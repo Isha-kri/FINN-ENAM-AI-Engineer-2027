@@ -13,3 +13,23 @@ export function stableFilingId(parts:string[]){return createHash('sha256').updat
 export function percentMove(current:number,previous:number){if(!Number.isFinite(current)||!Number.isFinite(previous)||previous===0)return null;return(current-previous)/previous*100;}
 export function volumeMultiple(current:number,priorSessions:number[]){if(!Number.isFinite(current)||priorSessions.length!==20||priorSessions.some(v=>!Number.isFinite(v)))return null;const average=priorSessions.reduce((a,b)=>a+b,0)/priorSessions.length;return average>0?current/average:null;}
 export function withinWindow(timestamp:number,now:number,hours:number){return Number.isFinite(timestamp)&&timestamp<=now&&timestamp>=now-hours*3600000;}
+export function moveThresholdExceeded(move:number|null,threshold:number){return move!==null&&Number.isFinite(threshold)&&threshold>0&&Math.abs(move)>=threshold;}
+export function volumeThresholdExceeded(multiple:number|null,threshold:number){return multiple!==null&&Number.isFinite(threshold)&&threshold>0&&multiple>=threshold;}
+export function financialChange(current:number,prior:number){
+  if(!Number.isFinite(current)||!Number.isFinite(prior))return{absolute:null as number|null,percentage:null as number|null,percentageMeaningful:false};
+  const absolute=current-prior;
+  return{absolute,percentage:prior>0?absolute/prior*100:null,percentageMeaningful:prior>0};
+}
+export function filingRuleMatches(ruleTicker:string,ruleCategories:string,filingTicker:string,filingCategory:string){
+  const tickerMatches=ruleTicker==='*'||ruleTicker.toUpperCase()===filingTicker.toUpperCase();
+  const categories=ruleCategories.split('|').map(x=>x.trim()).filter(Boolean);
+  return tickerMatches&&(categories.length===0||categories.includes('*')||categories.includes(filingCategory));
+}
+export function extractQuarterResultRow(pageText:string,label:string){
+  if(!/statement of consolidated audited results/i.test(pageText)||!/quarter ended/i.test(pageText)||!/in ₹ crore/i.test(pageText))return null;
+  const escaped=label.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  const match=pageText.replace(/\s+/g,' ').match(new RegExp(`(?:^|\\s)${escaped}\\s+([\\d,]+)\\s+([\\d,]+)\\s+([\\d,]+)(?=\\s|$)`,'i'));
+  if(!match)return null;
+  const values=match.slice(1,4).map(value=>Number(value.replace(/,/g,'')));
+  return values.every(Number.isFinite)?values:null;
+}
