@@ -8,6 +8,10 @@ FINN is a mobile-first investor signal desk with two clear modes: **Pulse** for 
 
 The Render Blueprint uses the free web-service tier for a review demo. It sleeps after inactivity, and its SQLite database and indexed PDFs are ephemeral and may reset on restart or redeploy. This deployment is for evaluation, not durable storage. Render requires you to sign in, connect the GitHub repository, review the Blueprint, and approve deployment.
 
+## Run on your own computer
+
+For an evaluator who wants to run FINN locally, use GitHub's **Code → Download ZIP** or clone this repo. On Windows, double-click `start-finn.bat`; on macOS/Linux, run `./start-finn.sh`. Both build and start FINN at <http://localhost:8000>. Docker users can run `docker compose up --build`. See [LOCAL_RUN.md](LOCAL_RUN.md) for setup details and phone-on-same-Wi-Fi access.
+
 ## Run locally
 
 Requirements: Node.js 20.19+ or 22.12+ (tested with Node 24) and npm. The API and UI run locally; no account, API key, or external service is needed to start.
