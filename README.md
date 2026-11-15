@@ -1,6 +1,6 @@
 # FINN — Financial Investment Agent
 
-FINN is a mobile-first investor signal desk with two clear modes: **Pulse** for portfolio changes and EOD alerts, and **Deep Research** for page-cited excerpts from primary company documents. The prototype is deliberately honest about coverage: the initial Pulse cards are illustrative fixtures, while refreshable filings/prices and the Infosys document library are real sources.
+FINN is a mobile-first investor workspace with five destinations: **Pulse**, **Portfolio**, **Research**, **Watchtower**, and **Journal**. It combines filing triage and EOD monitoring with page-cited primary-source research and a private, locally stored company-note journal. The interface distinguishes illustrative Pulse cards from refreshable filings/prices and verified research sources.
 
 **Submission repository:** [github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027](https://github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027). No hosted demo is available yet; run locally using the steps below.
 
@@ -35,13 +35,15 @@ Open <http://localhost:8000>. `PORT` can select another API port. See [.env.exam
 ## What works
 
 - **Pulse:** 18-company NSE universe, 24h / 3d / 7d / custom date filter, company search, category and high-priority filters, routine collapse, an on-demand NSE RSS refresh, direct filing links, and clear sample labels when the current feed has no matching portfolio filing.
+- **Portfolio:** searchable, sector-filtered company cards with latest stored EOD observations, source date, coverage summary, company detail, and a Deep Research handoff.
 - **Company detail:** select a ticker from a Pulse filing to inspect its latest stored EOD close and freshness, recent matching filings, configured research documents, and a link into Deep Research.
 - **EOD data:** refresh fetches daily Yahoo chart history, stores observations in SQLite, and labels values EOD / delayed. The source is a third-party convenience feed, not an exchange feed or a live quote.
 - **Watchtower:** create, edit, enable/disable, and remove close-move, volume, or filing-category rules. Rules and deduplicated triggers persist in SQLite. Filing rules can target a ticker or the whole portfolio. Move rules compare adjusted closes. Volume uses the prior 20 sessions and excludes the current session. Market triggers are evaluated on a later EOD session; filing triggers are raised when a new matching filing is ingested.
+- **Journal:** save, edit, status-track, search, and delete local notes by company. Entry types cover thesis, catalyst, risk, and question. Notes are explicitly presented as user working notes, not company-source claims.
 - **Deep Research:** accepts NSE symbols. Infosys is the worked example; the initial ad-hoc examples Cipla, Coal India, Trent, and BPCL now have configured primary-source links shown in a ticker-specific source library. FINN downloads configured PDFs on the first research question, keeps page boundaries, stores checksums and document metadata, and uses local lexical retrieval. Ask results and a guided five-lens evidence map link excerpts to original PDF pages. The map is extractive evidence, not generated conclusions; no LLM is involved.
 - **Results extraction:** the official Infosys Q2 FY27 audited statement is indexed as a primary source. FINN extracts consolidated Revenue, PBT, and PAT with Q2/QoQ/YoY values and page evidence; EBITDA remains explicitly “not reliably extracted” because the statement has no explicit EBITDA row.
 - **Guidance vs. outcomes:** FINN retrieves quantitative revenue guidance from the latest four indexed Infosys calls and links each excerpt to its transcript page. It finds the FY26 3%–3.5% guidance and compares it with the later reported 3.1% constant-currency FY26 outcome. FY27 outcome rows remain “not found” because the financial year is still in progress.
-- **Mobile layout:** bottom navigation and single-column research/watch screens; desktop uses a side rail and source panel.
+- **Mobile layout:** five-item bottom navigation, responsive Portfolio cards, and single-column research/watch/journal screens; desktop uses a side rail and evidence layout.
 
 ## Data and trust boundaries
 

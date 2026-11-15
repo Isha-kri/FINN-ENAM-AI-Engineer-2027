@@ -1,11 +1,11 @@
 # Covering email draft
 
 **To:** assessment@enam.com  
-**Subject:** IIT Delhi – AI Engineer - 2027
+**Subject:** IIT Delhi â€“ AI Engineer - 2027
 
 Hello ENAM team,
 
-I built FINN as a mobile-first signal desk with a portfolio pulse, configurable EOD alerts, and a source-grounded research view. The prototype reads official NSE announcements RSS and Yahoo daily history and indexes verified Infosys annual and quarterly primary documents page by page, and it indexes Infosys’s FY26 annual report and Q2 FY27 earnings-call transcript page by page. Research results show short retrieved excerpts with links to the cited PDF pages.
+I built FINN as a mobile-first investor workspace with Pulse, Portfolio, Deep Research, Watchtower, and a private Research Journal. The prototype reads official NSE announcements RSS and Yahoo daily history and indexes verified Infosys annual and quarterly primary documents page by page. Research results show short retrieved excerpts with links to the cited PDF pages; journal notes are kept separate from source-backed company evidence.
 
 I kept the product deliberately small and honest about its boundaries: the Pulse fallback examples are marked illustrative; Yahoo data is labeled EOD/delayed; and FINN does not invent a result, filing, or research conclusion when it cannot cite a primary source. The local zero-key research mode uses lexical retrieval rather than a stock-price model or an LLM. SQLite holds filings, price history, alert rules, trigger events, document metadata, and page chunks on the machine running the app.
 

@@ -44,3 +44,10 @@
 - Created the public submission repository at https://github.com/Isha-kri/FINN-ENAM-AI-Engineer-2027 and pushed the project. Added the live repository link to README and the covering email draft. No deployed demo URL is available yet.
 - Prepared Render deployment with a free-tier Blueprint, health check, and configurable local database directory. The README includes a one-click deploy link. Live deployment still requires the account owner to sign in and approve the Blueprint; free service storage is ephemeral, so this is for demo review only.
 - Added a clearly labeled, submission-friendly reconstruction of actual user directions and project actions to AI_BUILD_HISTORY.md. It does not claim to be the full transcript; the account owner must attach or link the real Codex export.
+
+## Product refinement — 15 November 2026
+
+- Responded to feedback that the prototype felt too sparse and hard to scan. Reworked the visual system with more readable type, light content surfaces, stronger contrast, a daily briefing card, and larger mobile-friendly controls.
+- Expanded the workspace navigation to five destinations: Pulse, Portfolio, Research, Watchtower, and Journal. Portfolio adds searchable/sector-filtered market-universe cards with EOD freshness and company/research handoffs.
+- Added a persistent local Research Journal with CRUD, ticker normalization, entry types, status tracking, and search/filtering. Journal notes are labeled as user working notes, separate from primary-source company evidence.
+- Verified note create/update/status/delete through the local API, and confirmed the portfolio endpoint returns all 18 configured names. `npm.cmd run check`, all 11 domain tests, and `npm.cmd run build` passed. Reviewed desktop/mobile screenshots; the Windows headless browser had viewport scaling quirks in this session, so phone layout is adjusted with explicit mobile widths and a five-column footer.

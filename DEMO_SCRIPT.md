@@ -1,9 +1,10 @@
 # Demo script (about 4 minutes)
 
-1. **Pulse — 45 seconds.** Show the 24h / 3d / 7d / custom date controls, company and filing-category filters, high-priority switch, and collapsed routine section. Point out `ILLUSTRATIVE FEED` and `DEMO` markers: the fallback examples are not exchange filings.
-2. **Refresh — 45 seconds.** Press `Refresh sources`. Show the NSE scan count and Yahoo EOD symbol count. Explain that the NSE feed had no recent matches among the chosen names during the captured window; the direct filing links appear when a portfolio row matches. Data is EOD/delayed, never streaming.
-3. **Research — 100 seconds.** Select `Research`, keep `INFY.NS`, and ask about Q2 growth. Use `Build evidence map` for cited business, financial, narrative, positive, and risk passages. `Compare guidance with outcomes` shows four indexed call ranges and the Q3 FY26 range against the later 3.1% FY26 result. `Extract latest results` shows Revenue, PBT, PAT, QoQ/YoY, and EBITDA's not reliably extracted status with PDF page evidence.
-4. **Watchtower — 60 seconds.** Add and edit an EOD move/volume rule or a filing-category rule for one ticker or the whole portfolio. Show the latest Yahoo EOD rows and rule states. Market triggers need a newer EOD session; filing triggers are created when a matching source filing is first ingested.
+1. **Pulse — 40 seconds.** Show the daily briefing, 24h / 3d / 7d / custom date controls, company and filing-category filters, high-priority switch, and collapsed routine section. Point out `ILLUSTRATIVE FEED` and `DEMO` markers: fallback examples are not exchange filings.
+2. **Portfolio — 40 seconds.** Search or filter the 18-company universe by sector. Open a company brief to inspect stored EOD freshness, recent filings, and configured research links; hand off to Deep Research.
+3. **Research journal — 35 seconds.** Create a local note tagged Thesis, Catalyst, Risk, or Question, then edit its status. Explain that personal notes are kept separate from source-backed company evidence.
+4. **Refresh and Watchtower — 55 seconds.** Press `Refresh sources` to show NSE scan and Yahoo EOD coverage. Add an EOD move/volume rule or filing-category rule for a ticker or the portfolio. EOD data is never streaming; market triggers need a newer session.
+5. **Deep Research — 100 seconds.** Select `Research`, keep `INFY.NS`, and ask about Q2 growth. Use `Build evidence map` for cited business, financial, narrative, positive, and risk passages. `Compare guidance with outcomes` shows four indexed call ranges and the Q3 FY26 range against the later 3.1% FY26 result. `Extract latest results` shows Revenue, PBT, PAT, QoQ/YoY, and the EBITDA extraction gap with PDF page evidence.
 
 ## Reset
 
