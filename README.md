@@ -68,3 +68,8 @@ See [ARCHITECTURE.md](ARCHITECTURE.md). The app is React + TypeScript + Vite, wi
 - Browser screenshot automation could not initialize in this Windows session, so mobile/desktop screenshot QA and end-to-end interaction checks are not claimed as complete.
 
 See [BUILD_LOG.md](BUILD_LOG.md), [SOURCES_AND_LIMITATIONS.md](SOURCES_AND_LIMITATIONS.md), and [DEMO_SCRIPT.md](DEMO_SCRIPT.md) for details.
+
+## AI conversation record
+
+[AI_BUILD_CONVERSATION.md](AI_BUILD_CONVERSATION.md) is a disclosed reconstruction from the available project conversation, not a verbatim chat export. See [AI_BUILD_HISTORY.md](AI_BUILD_HISTORY.md) for the build record. Use the chat platform's export/share feature for an original conversation export.
+
