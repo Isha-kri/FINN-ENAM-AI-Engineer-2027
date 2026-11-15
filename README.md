@@ -10,7 +10,7 @@ The Render Blueprint uses the free web-service tier for a review demo. It sleeps
 
 ## Run on your own computer
 
-For an evaluator who wants to run FINN locally, use GitHub's **Code → Download ZIP** or clone this repo. On Windows, double-click `start-finn.bat`; on macOS/Linux, run `./start-finn.sh`. Both build and start FINN at <http://localhost:8000>. Docker users can run `docker compose up --build`. See [LOCAL_RUN.md](LOCAL_RUN.md) for setup details and phone-on-same-Wi-Fi access.
+For an evaluator who wants to run FINN locally, download [FINN-local-prototype.zip](FINN-local-prototype.zip) or clone this repo. On Windows, double-click `start-finn.bat`; on macOS/Linux, run `./start-finn.sh`. Both build and start FINN at <http://localhost:8000>. Docker users can run `docker compose up --build`. See [LOCAL_RUN.md](LOCAL_RUN.md) for setup details and phone-on-same-Wi-Fi access.
 
 ## Run locally
 
